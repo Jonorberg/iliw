@@ -1,11 +1,27 @@
 
-<html>
-<head>
-<script src="http://assets.absolutdrinks.com/api/addb-0.5.2.js" type="text/javascript"></script>
-</head
-<body>
-	<h1>
-		assss
-	</h1>
-</body>
+<!doctype html>
+      
+	  <html lang="sv-SE">
+	        <head>
+			        <meta charset="utf-8" />
+					<title>Iliw</title>
+					<meta name="viewport" content="width=device-width; initial-scale=1.0">
+					<link rel="stylesheet" href="style.css" />
+		
+			</head>
+		<body>
+<div class="container">
+    <h1>Search for an Artist</h1>
+    <form id="search-form">
+        <input type="text" id="query" value="" class="form-control" />
+        <input type="submit" id="search" class="btn btn-primary" value="Search" />
+    </form>
+    <div id="results"></div>
+</div>
+<script id="results-template" type="text/x-handlebars-template">
+    {{#each albums.items}}
+    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+    {{/each}}
+    </script>
+    </body>
 </html>
