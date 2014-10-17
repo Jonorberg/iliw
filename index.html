@@ -1,15 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Iliw</title>
+        <script type='text/javascript' src='spotify.js'></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">  
+        <script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://d2c87l0yth4zbw.cloudfront.net/reboot.css">
+</head>
 
-<!doctype html>
-      
-	  <html lang="sv-SE">
-	        <head>
-			        <meta charset="utf-8" />
-					<title>Iliw</title>
-					<meta name="viewport" content="width=device-width; initial-scale=1.0">
-					<link rel="stylesheet" href="style.css" />
-                    <script src="spotify.js" type="text/javascript"></script> 
-		
-			</head>
 		<body>
 <div class="container">
     <h1>Search for an Artist</h1>
@@ -19,10 +19,12 @@
     </form>
     <div id="results"></div>
 </div>
-<script id="results-template" type="text/x-handlebars-template">
+<script src="spotify.js"  id="results-template" type="text/x-handlebars-template">
     {{#each albums.items}}
     <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
     {{/each}}
     </script>
     </body>
 </html>
+
+
