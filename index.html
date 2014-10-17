@@ -7,6 +7,7 @@
 					<title>Iliw</title>
 					<meta name="viewport" content="width=device-width; initial-scale=1.0">
 					<link rel="stylesheet" href="style.css" />
+                    <script src="spotify.js" type="text/javascript"></script> 
 		
 			</head>
 		<body>
@@ -18,7 +19,7 @@
     </form>
     <div id="results"></div>
 </div>
-<script src="spotify.js" id="results-template" type="text/x-handlebars-template">
+<script id="results-template" type="text/x-handlebars-template">
     {{#each albums.items}}
     <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
     {{/each}}
