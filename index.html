@@ -10,7 +10,7 @@
         <script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://d2c87l0yth4zbw.cloudfront.net/reboot.css">
-        <script type="text/javascript" src="path/to/instafeed.min.js"></script>
+        <script type="text/javascript" src="instafeed.min.js"></script>
 
 </head>
 
@@ -33,9 +33,9 @@
     </script>
 
    <!--Instagram kod-->
-
+<div id="instafeed"></div>
 <script type="text/javascript">
-    var feed = new instaFeed({
+    var feed = new Instafeed({
         get: 'tagged',
         tagName: 'vuxenresan',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -43,7 +43,7 @@
         resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
-    instaFeed.run();
+    feed.run();
 </script>
 
     </body>
