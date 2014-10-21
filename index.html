@@ -10,6 +10,7 @@
         <script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://d2c87l0yth4zbw.cloudfront.net/reboot.css">
+        <script type='application/javascript' src="https://addb.absolutdrinks.com/?appId=1249&callback=myCallback"></script>
         <script type="text/javascript" src="instafeed.min.js"></script>
 
 </head>
@@ -44,6 +45,30 @@
         sortBy: 'most-recent'
     });
     feed.run();
+</script>
+
+<div id="instafeedTwo"></div>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'tbt',
+        clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
+        template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
+        resolution: 'low_resolution',
+        sortBy: 'most-recent'
+    });
+    feed.run();
+</script>
+<!--Absolut vodka testkod-->
+<script src="scriptlibrary.js" type="text/javascript" >
+var withIngredient = new DrinksQuery({
+    get: 'ingredients',
+    clientId: '559e24ff0b944a14b9a129a2abc3e757',
+    template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
+    resolution: 'low_resolution',
+
+});
+    withIngredient.run();
 </script>
 
     </body>
