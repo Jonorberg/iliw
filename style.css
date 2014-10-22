@@ -4,6 +4,14 @@ body {
 
 #search-form, .form-control {
     margin-bottom: 20px;
+    height: 40px
+}
+
+input#query.form-control{
+	width:346px
+}
+input#search.btn.btn-primary{
+	background-color: #c6c6c6;
 }
 
 .cover {
@@ -20,3 +28,19 @@ body {
 .cover.playing {
     border: 5px solid #e45343;
 }
+#vodka-wrapper{
+	 width: 346px;
+	 background-color: #d6d6d6;
+	 float:left;
+}
+.container{
+width: 346px;
+	 background-color: #d6d6d6;
+	 float:right;
+}
+
+#instafeed{
+	 width: 346px;
+	 background-color: #d6d6d6;
+	 margin: auto;
+	 }
