@@ -83,7 +83,8 @@ $(document).ready(function(){
     // is where the page lives on my local machine. You will have to change this to your appId (which should be connected to
     // http://iliw.unvelo.se I guess?).
     addb.init({
-        appId: 1249
+        appId: 1249,
+        defaultPageSize: 5
     });
 
     // This connects code to the search button in the markup
