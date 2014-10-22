@@ -11,7 +11,7 @@
 
             <!--kod för Spotifysökruta och visning av album samt uppspelning av låtar-->
 
-<h1>Search for an Artist</h1>
+<h1>Type in your favorite ingredient</h1>
 <form id="search-form">
     <input type="text" id="query" value="" class="form-control" />
     <input type="submit" id="search" class="btn btn-primary" value="Search" />
@@ -19,24 +19,24 @@
 
 <!-- Vodka html -->
 <div id="vodka-wrapper">
-    <h2>Drinks!</h2>
+    <h2>Drinks</h2>
     <ul id="vodka-out"></ul>
 </div>
 
-<h2>Spotify!</h2>
+<h2>Spotify</h2>
 <div class="container">
     <div id="results"></div>
 </div>
 <script src="spotify.js"  id="results-template" type="text/x-handlebars-template">
-    //{{#each albums.items}}
-    //<div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
-    //{{/each}}
+    {{#each albums.items}}
+    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+    {{/each}}
 </script>
 <!-- menu for themes in instagram-->
 <div class="themeselector"></div>
 
 <!--Instagram kod-->
-<h2>Pictures!</h2>
+<h2>Pictures</h2>
 <div id="instafeed"></div>
 
 </body>
