@@ -1,5 +1,4 @@
 // This is the jQuery way of doing something after the page (and for example all other javascript libraries) are loaded.
-// Instagram kod//
 $(document).ready(function(){
 	var feed = new Instafeed({
         get: 'tagged',
@@ -21,7 +20,7 @@ $(document).ready(function(){
     });
     feed.run();
 
-//Spotify kod//
+
     // find template and compile it
 	var templateSource = document.getElementById('results-template').innerHTML,
 	    template = Handlebars.compile(templateSource),
@@ -31,7 +30,7 @@ $(document).ready(function(){
 
 	var fetchTracks = function (albumId, callback) {
 	    $.ajax({
-	        url: 'https://api.spotify.com/v1/albums/' + tracksId,
+	        url: 'https://api.spotify.com/v1/albums/' + albumId,
 	        success: function (response) {
 	            callback(response);
 	        }
@@ -86,7 +85,7 @@ $(document).ready(function(){
     addb.init({
         appId: 1249
     });
-//Absolut vodka kod//
+
     // This connects code to the search button in the markup
     $('#search').click(function(){
     	console.log('search click');
