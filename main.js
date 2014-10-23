@@ -84,9 +84,31 @@ $(document).ready(function(){
     // http://iliw.unvelo.se I guess?).
     addb.init({
         appId: 1249,
-        defaultPageSize: 5
+        defaultPageSize: 10
     });
+    $('#search').click(function(){
+    	console.log('search click');
+        // This clears out the vodka-out list in the markup
+        $('#vodka-out').html('');
 
+        // This makes a call to the addb api and sends...
+        addb.drinks().withType($('#query').val()).loadSet(function(query) { 
+            // ...the results into a jQuery .each loop, which...
+            $(query.result).each(function(index, drink){
+                // ...prints the results in a html list.
+
+                $('#vodka-out').append("<h1>" + drink.name + "</h1>" + "<img width='306px' height='306px' style='display:inline-block;' title='" + drink.name + "' src='" + drink.image() + "'/>"+"<P>" + drink.descriptionPlain + "</p>");
+
+                for (var i =  0; i < drink.ingredients.length; i++) {
+                    $('#vodka-out').append("<li>" + drink.ingredients[i].textPlain + "</li>");
+
+                };
+
+                searchAlbums(drink.name);
+
+                });
+        });
+    });
     // This connects code to the search button in the markup
     $('#search').click(function(){
     	console.log('search click');
