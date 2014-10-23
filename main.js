@@ -5,7 +5,7 @@ $(document).ready(function(){
         tagName: 'funhats',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
         template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
-        resolution: 'low_resolution',
+        resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
     feed.run();
