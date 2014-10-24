@@ -12,7 +12,9 @@ $(document).ready(function(){
 $('#hat-party').click(function() {
   feed.run();
 });
- 	/*var feed = new Instafeed({
+
+ /*	
+    var feed = new Instafeed({
         get: 'tagged',
         tagName: 'comicon',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -20,9 +22,11 @@ $('#hat-party').click(function() {
         resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
-    feed.run();*/
+    $('#superhero').click(function() {
+  feed.run();
+});
 
-        /*var feed = new Instafeed({
+    var feed = new Instafeed({
         get: 'tagged',
         tagName: 'rockabilly',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -30,9 +34,11 @@ $('#hat-party').click(function() {
         resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
-    feed.run();*/
+    $('#rocknroll').click(function() {
+  feed.run();
+});
 
-        /*var feed = new Instafeed({
+    var feed = new Instafeed({
         get: 'tagged',
         tagName: 'halloweencostume',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -40,9 +46,11 @@ $('#hat-party').click(function() {
         resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
-    feed.run();*/
+    $('#halloween').click(function() {
+  feed.run();
+});
 
-        /*var feed = new Instafeed({
+    var feed = new Instafeed({
         get: 'tagged',
         tagName: 'hippilife',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -50,9 +58,11 @@ $('#hat-party').click(function() {
         resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
-    feed.run();*/
+    $('#flowerpower').click(function() {
+  feed.run();
+});
 
-    /*var feed = new Instafeed({
+    var feed = new Instafeed({
         get: 'tagged',
         tagName: 'moustaches',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -60,7 +70,10 @@ $('#hat-party').click(function() {
         resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
-    feed.run();*/
+    $('#moustasch').click(function() {
+  feed.run();
+});
+*/
 
     // find template and compile it
 	var templateSource = document.getElementById('results-template').innerHTML,
