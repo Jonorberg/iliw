@@ -1,5 +1,5 @@
 // This is the jQuery way of doing something after the page (and for example all other javascript libraries) are loaded.
-$(document).ready(function(){
+$(document).ready(function(){z
 	var feed = new Instafeed({
         get: 'tagged',
         tagName: 'funhats',

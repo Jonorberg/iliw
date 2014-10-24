@@ -9,48 +9,49 @@
 
         <body>
 
-            <!--kod för Spotifysökruta och visning av album samt uppspelning av låtar-->
+            <!--kod för sökruta --> 
 
 <h1>I like</h1>
 <form id="search-form">
-    <input type="text" id="query" value="Type in your favorite drinkingredient" class="form-control" onFocus="this.value=''" />
+    <input type="text" id="query" value="Type in your favorite drink ingredient" class="form-control" onFocus="this.value=''" />
 </form>
 <h1> drinks </h1>
 
 
 <!-- div image hatparty -->
 <div class="icons">
-<div id="funhats">
-  <img src="/images/hatparty100px.png"/>
+  <div id="funhats">
+    <img src="/images/hatparty100px.png"/>
+  </div>
+
+  <div id="rockabilly">
+    <img src="/images/rockabilly100px.png"/>
+  </div>
+
+  <div id="halloween">
+    <img src="/images/halloween100px.png"/>
+  </div>
+
+  <div id="moustasch">
+   <img src="/images/moustasch100px.png"/>
+  </div>
+
+  <div id="flowerpower">
+    <img src="/images/peacesign100px.png"/>
+  </div>
+
+  <div id="superhero">
+    <img src="/images/superhero100px.png"/>
+  </div>
 </div>
 
-<div id="rockabilly">
-  <img src="/images/rockabilly100px.png"/>
-</div>
-
-<div id="halloween">
-  <img src="/images/halloween100px.png"/>
-</div>
-
-<div id="moustasch">
-  <img src="/images/moustasch100px.png"/>
-</div>
-
-<div id="flowerpower">
-  <img src="/images/peacesign100px.png"/>
-</div>
-
-<div id="superhero">
-  <img src="/images/superhero100px.png"/>
-</div>
-</div>
-
-<!-- Vodka html -->
+<!-- Vodka kod -->
 <div id="vodka-wrapper">
     <h2>Drinks</h2>
     <ul id="vodka-out"></ul>
 </div>
 
+<!--Spotyfy kod-->
 <h2>Spotify</h2>
 <div class="container">
     <div id="results"></div>
@@ -60,8 +61,6 @@
     <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
     {{/each}}
 </script>
-<!-- menu for themes in instagram-->
-<div class="themeselector"></div>
 
 <!--Instagram kod-->
 <h2>Pictures</h2>
