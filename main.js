@@ -8,8 +8,10 @@ $(document).ready(function(){
         resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
-    feed.run();
 
+$('#hat-party').click(function() {
+  feed.run();
+});
  	/*var feed = new Instafeed({
         get: 'tagged',
         tagName: 'comicon',
@@ -125,7 +127,7 @@ $(document).ready(function(){
         appId: 1249,
         defaultPageSize: 10
     });
-    $('#search').click(function(){
+    $('#hat-party').click(function(){
     	console.log('search click');
         // This clears out the vodka-out list in the markup
         $('#vodka-out').html('');
@@ -149,7 +151,7 @@ $(document).ready(function(){
         });
     });
     // This connects code to the search button in the markup
-    $('#search').click(function(){
+    $('#hat-party').click(function(){
     	console.log('search click');
         // This clears out the vodka-out list in the markup
         $('#vodka-out').html('');
