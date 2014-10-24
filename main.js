@@ -9,12 +9,12 @@ $(document).ready(function(){
         sortBy: 'most-recent'
     });
 
-$('#hat-party').click(function() {
+$('#funhats').click(function() {
   feed.run();
 });
 
- /*	
-    var feed = new Instafeed({
+	
+    var feed2 = new Instafeed({
         get: 'tagged',
         tagName: 'comicon',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -23,10 +23,9 @@ $('#hat-party').click(function() {
         sortBy: 'most-recent'
     });
     $('#superhero').click(function() {
-  feed.run();
-});
-
-    var feed = new Instafeed({
+  feed2.run();
+});  
+    var feed3 = new Instafeed({
         get: 'tagged',
         tagName: 'rockabilly',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -34,11 +33,11 @@ $('#hat-party').click(function() {
         resolution: 'thumbnail',
         sortBy: 'most-recent'
     });
-    $('#rocknroll').click(function() {
-  feed.run();
+    $('#rockabilly').click(function() {
+  feed3.run();
 });
 
-    var feed = new Instafeed({
+    var feed3 = new Instafeed({
         get: 'tagged',
         tagName: 'halloweencostume',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -47,10 +46,10 @@ $('#hat-party').click(function() {
         sortBy: 'most-recent'
     });
     $('#halloween').click(function() {
-  feed.run();
+  feed3.run();
 });
 
-    var feed = new Instafeed({
+    var feed4 = new Instafeed({
         get: 'tagged',
         tagName: 'hippilife',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -59,10 +58,10 @@ $('#hat-party').click(function() {
         sortBy: 'most-recent'
     });
     $('#flowerpower').click(function() {
-  feed.run();
+  feed4.run();
 });
 
-    var feed = new Instafeed({
+    var feed5 = new Instafeed({
         get: 'tagged',
         tagName: 'moustaches',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -71,9 +70,8 @@ $('#hat-party').click(function() {
         sortBy: 'most-recent'
     });
     $('#moustasch').click(function() {
-  feed.run();
+  feed5.run();
 });
-*/
 
     // find template and compile it
 	var templateSource = document.getElementById('results-template').innerHTML,
@@ -140,7 +138,7 @@ $('#hat-party').click(function() {
         appId: 1249,
         defaultPageSize: 10
     });
-    $('#hat-party').click(function(){
+    $('.icons').click(function(){
     	console.log('search click');
         // This clears out the vodka-out list in the markup
         $('#vodka-out').html('');
@@ -164,7 +162,7 @@ $('#hat-party').click(function() {
         });
     });
     // This connects code to the search button in the markup
-    $('#hat-party').click(function(){
+    $('.icons').click(function(){
     	console.log('search click');
         // This clears out the vodka-out list in the markup
         $('#vodka-out').html('');
