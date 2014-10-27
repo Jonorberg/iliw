@@ -2,6 +2,42 @@ body {
     padding: 20px;
 }
 
+
+/* Create your favorite party formula*/
+header 
+	{
+	padding-top: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	text-align: center;
+	}
+
+#ingredienser
+	{
+    width: 400px;
+    height: 600px;
+    }
+
+    .item {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+    }
+
+/* 
+om responsiv
+http://www.w3.org/TR/css-flexbox-1/
+@media all and (max-width: 600px) {
+
+  #main { flex-flow: column; }
+  #main > article, #main > nav, #main > aside {
+       order: 0; width: auto;
+  }
+}
+*/
+
 .icons{
 	margin-left: auto;
 	margin-right: auto;
