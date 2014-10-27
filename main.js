@@ -31,7 +31,7 @@ $(document).ready(function(){
     });
 });
 
-	var feed = new Instafeed({
+    var feed = new Instafeed({
         get: 'tagged',
         tagName: 'funhats',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
@@ -44,7 +44,7 @@ $('#funhats').click(function() {
   feed.run();
 });
 
-	
+    
     var feed2 = new Instafeed({
         get: 'tagged',
         tagName: 'comicon',
@@ -105,62 +105,62 @@ $('#funhats').click(function() {
 });
 
     // find template and compile it
-	var templateSource = document.getElementById('results-template').innerHTML,
-	    template = Handlebars.compile(templateSource),
-	    resultsPlaceholder = document.getElementById('results'),
-	    playingCssClass = 'playing',
-	    audioObject = null;
+    var templateSource = document.getElementById('results-template').innerHTML,
+        template = Handlebars.compile(templateSource),
+        resultsPlaceholder = document.getElementById('results'),
+        playingCssClass = 'playing',
+        audioObject = null;
 
-	var fetchTracks = function (albumId, callback) {
-	    $.ajax({
-	        url: 'https://api.spotify.com/v1/albums/' + albumId,
-	        success: function (response) {
-	            callback(response);
-	        }
-	    });
-	};
+    var fetchTracks = function (albumId, callback) {
+        $.ajax({
+            url: 'https://api.spotify.com/v1/albums/' + albumId,
+            success: function (response) {
+                callback(response);
+            }
+        });
+    };
 
-	var searchAlbums = function (query) {
-	    $.ajax({
-	        url: 'https://api.spotify.com/v1/search',
-	        data: {
-	            q: query,
-	            type: 'album'
-	        },
-	        success: function (response) {
-	            console.log(response);
-	            resultsPlaceholder.innerHTML = template(response);
-	        }
-	    });
-	};
+    var searchAlbums = function (query) {
+        $.ajax({
+            url: 'https://api.spotify.com/v1/search',
+            data: {
+                q: query,
+                type: 'album'
+            },
+            success: function (response) {
+                console.log(response);
+                resultsPlaceholder.innerHTML = template(response);
+            }
+        });
+    };
 
-	results.addEventListener('click', function(e) {
-	    var target = e.target;
-	    if (target !== null && target.classList.contains('cover')) {
-	        if (target.classList.contains(playingCssClass)) {
-	            audioObject.pause();
-	        } else {
-	            if (audioObject) {
-	                audioObject.pause();
-	            }
-	            fetchTracks(target.getAttribute('data-album-id'), function(data) {            
-	                audioObject = new Audio(data.tracks.items[0].preview_url);
-	                audioObject.play();
-	                target.classList.add(playingCssClass);
-	                audioObject.addEventListener('ended', function() {
-	                    target.classList.remove(playingCssClass);
-	                });
-	                audioObject.addEventListener('pause', function() {
-	                    target.classList.remove(playingCssClass);
-	               });
-	            });
-	        }
-	    }
-	});
+    results.addEventListener('click', function(e) {
+        var target = e.target;
+        if (target !== null && target.classList.contains('cover')) {
+            if (target.classList.contains(playingCssClass)) {
+                audioObject.pause();
+            } else {
+                if (audioObject) {
+                    audioObject.pause();
+                }
+                fetchTracks(target.getAttribute('data-album-id'), function(data) {            
+                    audioObject = new Audio(data.tracks.items[0].preview_url);
+                    audioObject.play();
+                    target.classList.add(playingCssClass);
+                    audioObject.addEventListener('ended', function() {
+                        target.classList.remove(playingCssClass);
+                    });
+                    audioObject.addEventListener('pause', function() {
+                        target.classList.remove(playingCssClass);
+                   });
+                });
+            }
+        }
+    });
 
-	document.getElementById('search-form').addEventListener('submit', function (e) {
-	    e.preventDefault();
-	}, false);
+    document.getElementById('search-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+    }, false);
 
     // This intializes the addb library. 1281 is an appId that I've registered for me for the url http://localhost:8080 which
     // is where the page lives on my local machine. You will have to change this to your appId (which should be connected to
@@ -170,7 +170,7 @@ $('#funhats').click(function() {
         defaultPageSize: 10
     });
     $('.icons').click(function(){
-    	console.log('search click');
+        console.log('search click');
         // This clears out the vodka-out list in the markup
         $('#vodka-out').html('');
 
@@ -194,7 +194,7 @@ $('#funhats').click(function() {
     });
     // This connects code to the search button in the markup
     $('.icons').click(function(){
-    	console.log('search click');
+        console.log('search click');
         // This clears out the vodka-out list in the markup
         $('#vodka-out').html('');
 
@@ -204,7 +204,7 @@ $('#funhats').click(function() {
             $(query.result).each(function(index, drink){
                 // ...prints the results in a html list.
 
-                $('#vodka-out').append("<h1>" + drink.name + "</h1>" + "<img width='306px' height='306px' style='display:inline-block;' title='" + drink.name + "' src='" + drink.image() + "'/>"+"<P>" + drink.descriptionPlain + "</p>");
+                $('#vodka-out').append("<h3>" + drink.name + "</h3>" + "<img width='306px' height='306px' style='display:inline-block;' title='" + drink.name + "' src='" + drink.image() + "'/>"+"<P>" + drink.descriptionPlain + "</p>");
 
                 for (var i =  0; i < drink.ingredients.length; i++) {
                     $('#vodka-out').append("<li>" + drink.ingredients[i].textPlain + "</li>");
