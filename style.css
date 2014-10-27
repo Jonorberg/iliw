@@ -2,20 +2,54 @@ body {
     padding: 20px;
 }
 
+*{
+  border-style:none;  
+}
 
 /* Create your favorite party formula*/
 header 
-	{
-	padding-top: 2px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 2px;
-	text-align: center;
-	}
+  {
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  text-align: center;
+  }
+
+  h1
+  {
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+  h2
+  {
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+  h3
+  {
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  p
+  {
+    font-family: 'Lato';
+    font-weight: 100;
+  }
+
+
 
 #ingredienser
-	{
-    width: 	700px;
+  {
+    width:  700px;
     height: 200px
     text-align: center;
     }
@@ -41,28 +75,71 @@ http://www.w3.org/TR/css-flexbox-1/
 */
 
 ul.icons{
-	list-style-type: none;
+   list-style-type: none;
     margin-left: auto;
     margin-right: auto;
     height: 100px;
     display: -webkit-inline-box;
     text-align: center;
+    margin-bottom: 100px;
 }
 
+#funhats:hover {
+   opacity: 0.4;
+   filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+#rockabilly:hover {
+   opacity: 0.4;
+   filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+#halloween:hover {
+   opacity: 0.4;
+   filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+#moustasch:hover {
+   opacity: 0.4;
+   filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+#flowerpower:hover {
+   opacity: 0.4;
+   filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+#superhero:hover {
+   opacity: 0.4;
+   filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+
+li{
+  list-style-type: none;
+  font-family: 'Lato';
+  font-weight: 100;
+}
 
 #search-form, .form-control {
     margin-bottom: 20px;
     height: 40px
 }
 
+.container.icons{
+  margin-bottom: 200px;
+}
+
 input#query.form-control{
-	width:346px;
-	border-radius: 30px;
-	background-color: bisque;
+  width:346px;
+  border-radius: 30px;
+  background-color: #d6d6d6;
+  font-family: 'Lato';
+  padding-left: 10px;
 }
 
 input#search.btn.btn-primary{
-	background-color: #c6c6c6;
+  background-color: #c6c6c6;
 }
 
 .cover {
@@ -80,26 +157,24 @@ input#search.btn.btn-primary{
     border: 5px solid #e45343;
 }
 #vodka-wrapper{
-	 width: 346px;
-	 background-color: #d6d6d6;
-	 float:left;
+   width: 346px;
+   float:left;
+   margin-top: 200px;
 }
 #results{
-	width: 346px;
-	background-color: #d6d6d6;
-	margin: auto;
+  width: 346px;
+  margin: auto;
 }
 
 #instafeed{
-	 width: 346px;
-	 background-color: #d6d6d6;
-	 float:right;
-	 }
+   width: 346px;
+   float:right;
+   }
 
 
 /*pop up*/
 
-	#element_to_pop_up { 
+  #element_to_pop_up { 
    background-color:#fff;
    border-radius:15px;
    color:#000;
@@ -114,6 +189,10 @@ input#search.btn.btn-primary{
    right:10px;
    top:5px;
 }
+
+
+
+
  
-	 
-	 
+   
+   
