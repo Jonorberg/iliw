@@ -1,6 +1,7 @@
 // This is the jQuery way of doing something after the page (and for example all other javascript libraries) are loaded.
 $(document).ready(function(){
 
+//The pop up code
     ;(function($) {
 
          // DOM Ready
@@ -22,12 +23,20 @@ $(document).ready(function(){
 
     })(jQuery);
 
+//This code does the page scrolling down 300px when any of the icons is clicked
+    $(function() {
+    $(".icons").on("click", function() {
+        $("body").animate({"scrollTop": window.scrollY+300}, 1000);
+        return false;
+    });
+});
+
 	var feed = new Instafeed({
         get: 'tagged',
         tagName: 'funhats',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
         template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
-        resolution: 'thumbnail',
+        resolution: 'low_resolution',
         sortBy: 'most-recent'
     });
 
@@ -41,7 +50,7 @@ $('#funhats').click(function() {
         tagName: 'comicon',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
         template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
-        resolution: 'thumbnail',
+        resolution: 'low_resolution',
         sortBy: 'most-recent'
     });
     $('#superhero').click(function() {
@@ -52,7 +61,7 @@ $('#funhats').click(function() {
         tagName: 'rockabilly',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
         template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
-        resolution: 'thumbnail',
+        resolution: 'low_resolution',
         sortBy: 'most-recent'
     });
     $('#rockabilly').click(function() {
@@ -64,7 +73,7 @@ $('#funhats').click(function() {
         tagName: 'halloweencostume',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
         template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
-        resolution: 'thumbnail',
+        resolution: 'low_resolution',
         sortBy: 'most-recent'
     });
     $('#halloween').click(function() {
@@ -76,7 +85,7 @@ $('#funhats').click(function() {
         tagName: 'hippilife',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
         template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
-        resolution: 'thumbnail',
+        resolution: 'low_resolution',
         sortBy: 'most-recent'
     });
     $('#flowerpower').click(function() {
@@ -88,7 +97,7 @@ $('#funhats').click(function() {
         tagName: 'moustaches',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
         template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
-        resolution: 'thumbnail',
+        resolution: 'low_resolution',
         sortBy: 'most-recent'
     });
     $('#moustasch').click(function() {
