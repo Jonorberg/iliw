@@ -15,15 +15,17 @@ header
 
 #ingredienser
 	{
-    width: 400px;
-    height: 600px;
+    width: 	700px;
+    height: 200px
+    text-align: center;
     }
 
     .item {
-    width: 200px;
+    width: 346px;
     overflow: hidden;
     white-space: nowrap;
     float: left;
+    text-align: center;
     }
 
 /* 
@@ -38,15 +40,14 @@ http://www.w3.org/TR/css-flexbox-1/
 }
 */
 
-.icons{
-	margin-left: auto;
-	margin-right: auto;
-	width:70%;
+ul.icons{
+	list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    display: -webkit-inline-box;
+    text-align: center;
 }
-
-
-
-
 
 
 #search-form, .form-control {
@@ -55,8 +56,11 @@ http://www.w3.org/TR/css-flexbox-1/
 }
 
 input#query.form-control{
-	width:346px
+	width:346px;
+	border-radius: 30px;
+	background-color: bisque;
 }
+
 input#search.btn.btn-primary{
 	background-color: #c6c6c6;
 }
@@ -80,15 +84,36 @@ input#search.btn.btn-primary{
 	 background-color: #d6d6d6;
 	 float:left;
 }
-.container{
-width: 346px;
-	 background-color: #d6d6d6;
-	 float:right;
+#results{
+	width: 346px;
+	background-color: #d6d6d6;
+	margin: auto;
 }
 
 #instafeed{
 	 width: 346px;
 	 background-color: #d6d6d6;
-	 margin: auto;
+	 float:right;
 	 }
+
+
+/*pop up*/
+
+	#element_to_pop_up { 
+   background-color:#fff;
+   border-radius:15px;
+   color:#000;
+   display:none; 
+   padding:20px;
+   min-width:400px;
+   min-height: 180px;
+}
+.b-close{
+   cursor:pointer;
+   position:absolute;
+   right:10px;
+   top:5px;
+}
+ 
+	 
 	 
