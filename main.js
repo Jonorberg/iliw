@@ -8,7 +8,7 @@ $(document).ready(function(){
 
             // Binding a click event
             // From jQuery v.1.7.0 use .on() instead of .bind()
-            $('#my-button').bind('click', function(e) {
+            $('#my-button').on('click', function(e) {
 
                 // Prevents the default action to be triggered. 
                 e.preventDefault();
