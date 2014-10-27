@@ -1,5 +1,27 @@
 // This is the jQuery way of doing something after the page (and for example all other javascript libraries) are loaded.
 $(document).ready(function(){
+
+    ;(function($) {
+
+         // DOM Ready
+        $(function() {
+
+            // Binding a click event
+            // From jQuery v.1.7.0 use .on() instead of .bind()
+            $('#my-button').bind('click', function(e) {
+
+                // Prevents the default action to be triggered. 
+                e.preventDefault();
+
+                // Triggering bPopup when click event is fired
+                $('#element_to_pop_up').bPopup();
+
+            });
+
+        });
+
+    })(jQuery);
+
 	var feed = new Instafeed({
         get: 'tagged',
         tagName: 'funhats',
