@@ -34,39 +34,35 @@
 </div>
 
 
-
-<p id="icons">
-  <a href="#"><img src="images/hatparty100px.png"/></a>
-  <a href="#"><img src="images/rockabilly100px.png"/></a>
-  <a href="#"><img src="images/halloween100px.png"/></a>
-</p>
-
 <!-- div image hatparty -->
-<div class="icons">
-  <div id="funhats">
+<ul class="icons">
+
+ <li div id="funhats">
     <img src="/images/hatparty100px.png"/>
-  </div>
+  </div></li>
 
-  <div id="rockabilly">
+ <li div id="rockabilly">
     <img src="/images/rockabilly100px.png"/>
-  </div>
+  </div></li>
 
-  <div id="halloween">
+  <li div id="halloween">
     <img src="/images/halloween100px.png"/>
-  </div>
+  </div></li>
 
-  <div id="moustasch">
+  <li div id="moustasch">
    <img src="/images/moustasch100px.png"/>
-  </div>
+  </div></li>
 
-  <div id="flowerpower">
+  <li div id="flowerpower">
     <img src="/images/peacesign100px.png"/>
-  </div>
+  </div></li>
 
-  <div id="superhero">
+ <li div id="superhero">
     <img src="/images/superhero100px.png"/>
-  </div>
-</div>
+  </div></li>
+</ul>
+
+<div class="container">
 
 <!-- Vodka kod -->
 <div id="vodka-wrapper">
@@ -74,33 +70,31 @@
     <ul id="vodka-out"></ul>
 </div>
 
+<!--Instagram kod-->
+
+<div id="instafeed">
+  <h2>Pictures</h2></div>
+
+
+
 <!--Spotyfy kod-->
-<h2>Spotify</h2>
-<div class="container">
-    <div id="results"></div>
-</div>
+
+    <div id="results">
+    <h2>Spotify</h2></div>
+
 <script src="spotify.js"  id="results-template" type="text/x-handlebars-template">
     {{#each albums.items}}
     <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
     {{/each}}
 </script>
 
-<!--Instagram kod-->
-<h2>Pictures</h2>
-<div id="instafeed"></div>
-
-<!-- Button that triggers the popup -->
-<button id="my-button">POP IT UP</button>
-<!-- Element to pop up -->
-<div id="element_to_pop_up">
-    <a class="b-close">x<a/>
-    Content of popup
 </div>
-
 </body>
+
 <script type='text/javascript' src='spotify.js'></script>
 <script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+<script type="text/javascript" src="jquery.bpopup.min.js"></script>
 <script src="http://assets.absolutdrinks.com/api/addb-0.5.2.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="instafeed.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
