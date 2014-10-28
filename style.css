@@ -13,6 +13,7 @@ header
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 2px;
+  margin-top: 80px;
   text-align: center;
   }
 
@@ -46,22 +47,29 @@ header
   }
 
 
-
-#ingredienser
-  {
-    width:  700px;
-    height: 200px
+div#wrapper{
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
+    height: 70px;
+    width: 55%;
     }
 
-    .item {
-    width: 346px;
-    overflow: hidden;
-    white-space: nowrap;
+h1.ilike{
     float: left;
-    text-align: center;
     }
 
+.search-form, .form-control {
+    height: 40px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h1.drinks {
+  float:left;
+}
 /* 
 om responsiv
 http://www.w3.org/TR/css-flexbox-1/
@@ -121,11 +129,6 @@ li{
   font-weight: 100;
 }
 
-#search-form, .form-control {
-    margin-bottom: 20px;
-    height: 40px
-}
-
 .container.icons{
   margin-bottom: 200px;
 }
@@ -136,10 +139,6 @@ input#query.form-control{
   background-color: #d6d6d6;
   font-family: 'Lato';
   padding-left: 10px;
-}
-
-input#search.btn.btn-primary{
-  background-color: #c6c6c6;
 }
 
 .cover {
