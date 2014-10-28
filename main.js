@@ -31,6 +31,15 @@ $(document).ready(function(){
     });
 });
 
+
+//This code hides the title for the result and show it when something is searched for
+    $(function() {
+    $("h1.partyrecepie").hide();
+        $(".icons").click(function() {
+            $("h1.partyrecepie").show();
+    });
+});
+
     var feed = new Instafeed({
         get: 'tagged',
         tagName: 'funhats',
@@ -41,10 +50,9 @@ $(document).ready(function(){
     });
 
 $('#funhats').click(function() {
-  feed.run();
-});
-
-    
+    $('#instafeed').html('');
+    feed.run();
+}); 
     var feed2 = new Instafeed({
         get: 'tagged',
         tagName: 'comicon',
@@ -54,8 +62,10 @@ $('#funhats').click(function() {
         sortBy: 'most-recent'
     });
     $('#superhero').click(function() {
+        $('#instafeed').html('');
   feed2.run();
-});  
+    }); 
+
     var feed3 = new Instafeed({
         get: 'tagged',
         tagName: 'rockabilly',
@@ -65,6 +75,7 @@ $('#funhats').click(function() {
         sortBy: 'most-recent'
     });
     $('#rockabilly').click(function() {
+        $('#instafeed').html('');
   feed3.run();
 });
 
@@ -77,6 +88,7 @@ $('#funhats').click(function() {
         sortBy: 'most-recent'
     });
     $('#halloween').click(function() {
+        $('#instafeed').html('');
   feed3.run();
 });
 
@@ -89,6 +101,7 @@ $('#funhats').click(function() {
         sortBy: 'most-recent'
     });
     $('#flowerpower').click(function() {
+        $('#instafeed').html('');
   feed4.run();
 });
 
@@ -101,6 +114,7 @@ $('#funhats').click(function() {
         sortBy: 'most-recent'
     });
     $('#moustasch').click(function() {
+        $('#instafeed').html('');
   feed5.run();
 });
 
