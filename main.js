@@ -26,7 +26,7 @@ $(document).ready(function(){
 //This code does the page scrolling down 300px when any of the icons is clicked
     $(function() {
     $(".icons").on("click", function() {
-        $("body").animate({"scrollTop": window.scrollY+300}, 1000);
+        $("body").animate({"scrollTop": window.scrollY+760}, 1000);
         return false;
     });
 });
@@ -117,6 +117,26 @@ $('#funhats').click(function() {
         $('#instafeed').html('');
   feed5.run();
 });
+
+//Random quotes 
+
+var quotes=new Array();
+quotes[0] = "Please use the following to shake your drinks and booty:";
+quotes[1] = "Please party hard using our recipe:";
+quotes[2] = "Use this inspiration to make your party blow minds:";
+quotes[3] = "This is your mindblowing inspiration that will make your party blow minds:";
+quotes[4] = "Drink irresponsibly and have the most awesome party!";
+quotes[5] = "Please party hard using our recipe:";
+quotes[6] = "This is your fun fest!";
+
+var q = quotes.length;
+var whichquote=Math.round(Math.random()*(q-1));
+
+function showquote(){
+    document.getElementById('quote').innerHTML = quotes[whichquote];
+}
+showquote();
+
 
     // find template and compile it
     var templateSource = document.getElementById('results-template').innerHTML,
