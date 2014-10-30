@@ -40,6 +40,20 @@ $(document).ready(function(){
     });
 });
 
+    $(function() {
+    $(".footer").hide();
+        $(".icons").click(function() {
+            $(".footer").show();
+    });
+});
+
+    $(function() {
+    $("#vodka-wrapper").hide();
+        $(".icons").click(function() {
+            $("#vodka-wrapper").show();
+    });
+});
+
     var feed = new Instafeed({
         get: 'tagged',
         tagName: 'funhats',
@@ -55,7 +69,7 @@ $('#funhats').click(function() {
 }); 
     var feed2 = new Instafeed({
         get: 'tagged',
-        tagName: 'comicon',
+        tagName: 'marvelcostume',
         clientId: '088e7ceced2c4a8cba62ca9e44de92d2',
         template: '<a href="{{link}}"><img src="http:{{image}}" /></a>',
         resolution: 'low_resolution',
